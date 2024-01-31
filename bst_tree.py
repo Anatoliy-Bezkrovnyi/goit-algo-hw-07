@@ -33,13 +33,13 @@ def min_value_node(node):
     current = node
     while current.left:
         current = current.left
-    return current
+    return current.val
 
 def max_value_node(node):
     current = node
     while current.right:
         current = current.right
-    return current
+    return current.val
 
 def sum_elements(root):
     if root == None:
@@ -64,7 +64,7 @@ def delete(root, key):
             temp = root.left
             root = None
             return temp
-        root.val = min_value_node(root.right).val
+        root.val = min_value_node(root.right)
         root.right = delete(root.right, root.val)
     return root
 
@@ -79,8 +79,8 @@ root = insert(root, 8)
 print(root)
 root = delete(root, 7)
 print(root)
-min_val = min_value_node(root).val
-max_val = max_value_node(root).val
+min_val = min_value_node(root)
+max_val = max_value_node(root)
 sum_el = sum_elements(root)
 print(f"Мінімальне значення: {min_val}")
 print(f"Максимальне значення: {max_val}")
