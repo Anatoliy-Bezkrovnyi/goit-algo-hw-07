@@ -79,7 +79,10 @@ root = insert(root, 8)
 print(root)
 root = delete(root, 7)
 print(root)
-print(f"Мінімальне значення: {min_value_node(root)}")
-print(f"Максимальне значення: {max_value_node(root)}")
-print(f"Сума елементів дерева: {sum_elements(root)}")
+min_val = min_value_node(root).val
+max_val = max_value_node(root).val
+sum_el = sum_elements(root)
+print(f"Мінімальне значення: {min_val}")
+print(f"Максимальне значення: {max_val}")
+print(f"Сума елементів дерева: {sum_el}")
 
